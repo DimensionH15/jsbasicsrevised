@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section>
+        <h1>Text Editor</h1>
+        <div class = "button-container">
+            <button onclick="editoroption1()" title="Bold Text">
+                Bold
+            </button>
+            <button onclick="editoroption2()" title="Italic Text">
+                 Italic
+            </button>
+            <button onclick="editoroption3()" title="Left Align">
+                <i class="fas fa-align-left"></i>
+            </button>
+            <button onclick="editoroption4()" title ="Center Align">
+                <i class ="fas fa-align-center"></i>
+            </button>
+            <button onclick="editoroption5()" title="Right Align">
+                <i class="fas fa fa-align-right"></i>
+            </button>
+            <button onclick="editoroption6()" title="Uppercase text">
+                UpperCase
+            </button>
+            <button onclick="editoroption7()" title="LowerCase text">
+                LowerCase
+            </button>
+            <button onclick="editoroption8()" title="Capitalize Text">
+                Capitalize
+            </button>
+            <button onclick="editoroption9()" title="Clear Text">
+                Clear Text
+            </button>
+        </div>
+        <textarea id="textarea1" rows="15" placeholder="Your text here..." ></textarea>
+        <p id="count">0 words, 0 characters</p>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

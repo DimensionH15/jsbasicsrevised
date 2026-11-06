@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex min-h-screen items-center justify-center bg-linear-to-br from-indigo-50 to-sky-100 p-4">
+
+  <main class="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl ring-1 ring-slate-200 sm:p-8">
+    <h1 class="mb-6 text-center text-3xl font-bold tracking-tight text-slate-800">
+      Currency Converter
+    </h1>
+
+    <!-- Amount -->
+    <label for="amount" class="mb-1 block text-sm font-medium text-slate-600">Amount</label>
+    <input id="amount" type="number" inputmode="decimal" min="0" step="any" placeholder="0.00"
+           class="mb-5 w-full rounded-lg border border-slate-300 px-3 py-2 text-lg
+                  focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30">
+
+    <!-- From / swap / To -->
+    <div class="grid grid-cols-[1fr_auto_1fr] items-end gap-3">
+      <div>
+        <label for="from" class="mb-1 block text-sm font-medium text-slate-600">From</label>
+        <select id="from"
+                class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2
+                       focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30">
+          <option value="">Select…</option>
+        </select>
+      </div>
+
+      <button id="swap" type="button" aria-label="Swap currencies"
+              class="rounded-full border border-slate-300 p-2 text-slate-500 transition
+                     hover:rotate-180 hover:bg-slate-100 hover:text-brand-600">
+        ⇄
+      </button>
+
+      <div>
+        <label for="to" class="mb-1 block text-sm font-medium text-slate-600">To</label>
+        <select id="to"
+                class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2
+                       focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30">
+          <option value="">Select…</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-6 flex gap-3">
+      <button id="convert" type="button"
+              class="flex-1 rounded-lg bg-brand-500 px-4 py-2.5 font-semibold text-white transition
+                     hover:bg-brand-600 active:scale-95">
+        Convert
+      </button>
+      <button id="reset" type="button"
+              class="rounded-lg border border-slate-300 px-4 py-2.5 font-semibold text-slate-600 transition
+                     hover:bg-slate-100 active:scale-95">
+        Reset
+      </button>
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="mt-6 hidden rounded-lg bg-slate-50 p-4 text-center">
+      <p class="text-sm text-slate-500">Converted amount</p>
+      <p id="resultValue" class="text-2xl font-semibold"></p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
